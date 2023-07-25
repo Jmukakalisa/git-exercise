@@ -371,3 +371,192 @@ To https://github.com/Jmukakalisa/git-exercise.git
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.       
 $
 ```
+
+- Bundle 2 Exercise 2
+
+```
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/bundle-2)
+$ git branch
+  dev
+* ft/bundle-2
+  main
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 6 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 621 bytes | 124.00 KiB/s, done.
+From https://github.com/Jmukakalisa/git-exercise
+   e12d838..5fda5e5  main       -> origin/main
+Updating 723a473..5fda5e5
+Fast-forward
+ readme.md    | 222 +++++++++++++++++++++++++++++++++++++++++++++++------------
+ service.html |  12 ++++
+ 2 files changed, 190 insertions(+), 44 deletions(-)
+ create mode 100644 service.html
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git add .
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git commit  -m "ft(): new span element"
+[ft/service-redesign ab7a212] ft(): new span element
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ p5[7^C
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ ^[[200~git push --set-upstream origin ft/service-redesign
+bash: $'\E[200~git': command not found
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Jmukakalisa/git-exercise/pull/new/ft/service-redesign
+remote:
+To https://github.com/Jmukakalisa/git-exercise.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
+$ git add service.html
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
+$ git commit -m "main b changes"
+[main 1982c69] main b changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Jmukakalisa/git-exercise.git
+   5fda5e5..1982c69  main -> main
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+M       readme.md
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git diff
+diff --git a/readme.md b/readme.md
+index 85abdc5..e79e62c 100644
+--- a/readme.md
++++ b/readme.md
+@@ -370,4 +370,87 @@ To https://github.com/Jmukakalisa/git-exercise.git
+  * [new branch]      ft/bundle-2 -> ft/bundle-2
+ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+ $
++```
++
++- Bundle 2 Exercise 2
++
++```
++
++mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/bundle-2)
++$ git branch
++  dev
++* ft/bundle-2
++  main
++
++mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/bundle-2)
++$ git checkout main
++Switched to branch 'main'
++Your branch is behind 'origin/main' by 6 commits, and can be fast-forwarded.
++  (use "git pull" to update your local branch)
++
++mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
++$ git pull
++remote: Enumerating objects: 1, done.
++remote: Counting objects: 100% (1/1), done.
++remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
++Unpacking objects: 100% (1/1), 621 bytes | 124.00 KiB/s, done.
++From https://github.com/Jmukakalisa/git-exercise
++   e12d838..5fda5e5  main       -> origin/main
++Updating 723a473..5fda5e5
++Fast-forward
++ readme.md    | 222 +++++++++++++++++++++++++++++++++++++++++++++++------------
++ service.html |  12 ++++
++ 2 files changed, 190 insertions(+), 44 deletions(-)
++ create mode 100644 service.html
++
++mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (main)
++$ git checkout -b ft/service-redesign
++Switched to a new branch 'ft/service-redesign'
++
++mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
++$ git add .
++
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign|MERGING)
+$ git add .
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign|MERGING)
+$ git commit -m "ft(): merge main changes"
+[ft/service-redesign 394304e] ft(): merge main changes
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.08 KiB | 555.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Jmukakalisa/git-exercise.git
+   ab7a212..394304e  ft/service-redesign -> ft/service-redesign
+
+mukak@Killer MINGW64 ~/OneDrive/Desktop/git-exercise (ft/service-redesign)
+$
+```
