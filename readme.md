@@ -837,3 +837,77 @@ To https://github.com/Jmukakalisa/git-exercise-clone.git
  * [new branch]      main -> main
 
 ```
+
+- Bundle 4 Exercise 2
+
+```
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+$ git add footer.html
+
+$ git commit -m "ft(): Add footer"
+[ft/footer 976b758] ft(): Add footer
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+$ git add .
+
+$ git commit -m "ft(): Add footer contents"
+[ft/footer 7fbcf81] ft(): Add footer contents
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.21 KiB | 1.21 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Jmukakalisa/git-exercise/pull/new/ft/footer
+remote:
+To https://github.com/Jmukakalisa/git-exercise.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+$ git merge --squash ft/footer
+Updating dfc240d..7fbcf81
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+ create mode 100644 footer.html
+
+$ git commit -m "ft(): Add footer changes squashing"
+[ft/squashing 9f9349b] ft(): Add footer changes squashing
+ 1 file changed, 22 insertions(+)
+ create mode 100644 footer.html
+
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 531 bytes | 265.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Jmukakalisa/git-exercise/pull/new/ft/squashing
+remote:
+To https://github.com/Jmukakalisa/git-exercise.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+```
