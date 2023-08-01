@@ -980,7 +980,7 @@ $ cd git-cafe-exercise/
 
 $ code .
 
-$ git add .
+$ git add . 
 
 $ git status
 On branch main
