@@ -911,3 +911,98 @@ To https://github.com/Jmukakalisa/git-exercise.git
  * [new branch]      ft/squashing -> ft/squashing
 branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 ```
+
+### Bundle 5
+
+- Bundle 5 Exercise 1
+
+```
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+
+$ git add home.html
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    home.html -> index.html
+
+
+$ git commit -m "ft(): changed home to index file"
+[main c1eaf7d] ft(): changed home to index file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 248 bytes | 248.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Jmukakalisa/git-exercise.git
+   575bb73..c1eaf7d  main -> main
+```
+
+
+- Bundle 5 Exercise 2
+
+```
+$ cd ..
+
+
+$ git clone https://github.com/Jmukakalisa/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 93
+Receiving objects: 100% (107/107), 1.95 MiB | 373.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+
+$ cd git-cafe-exercise/
+
+$ code .
+
+$ git add .
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+$ git commit -m "ft(): rename the title"
+[main 941f721] ft(): rename the title
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Jmukakalisa/git-cafe-exercise.git
+   d1d3f9c..941f721  main -> main
+```
